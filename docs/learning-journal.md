@@ -40,3 +40,78 @@
 - What known_hosts is
 - What origin means in Git
 - How local main branch tracks origin/main
+# Session 3 — Maven Fundamentals & Framework Architecture
+
+## 🎯 Goal
+
+Understand the role of Maven in Java projects and define the high-level architecture of the Automation Framework.
+
+---
+
+## ✅ What was done
+
+- Discussed what an Automation Framework really is.
+- Defined the main goal of our Framework.
+- Designed the first high-level architecture.
+- Learned the difference between Framework architecture and project structure.
+- Studied Maven fundamentals.
+- Understood what Build Tool means.
+- Learned the purpose of `pom.xml`.
+- Understood the meaning of:
+    - groupId
+    - artifactId
+    - version
+    - SNAPSHOT
+- Added the first dependency (JUnit 5).
+- Configured Maven Surefire Plugin.
+- Successfully built the project using Maven.
+- Created the first successful `BUILD SUCCESS`.
+
+---
+
+## 📚 What I learned
+
+- Framework is not a collection of tests.
+- Framework is an architecture that helps engineers work in a consistent way.
+- Good architecture is built around responsibilities, not technologies.
+- Technologies should be replaceable without changing the whole Framework.
+- Maven reads the project's `pom.xml`, resolves dependencies and their transitive dependencies, downloads them from Maven Central (if needed) and builds the project.
+- `pom.xml` is a contract between the project and Maven.
+
+---
+
+## 💡 Key ideas
+
+- Architecture should remain stable.
+- Technologies may change.
+- Understanding is more valuable than memorizing.
+- Always ask "Why?" before "How?"
+
+---
+
+## 🧠 My thoughts
+
+Today I realized that Maven is much more than a dependency manager.
+
+The most interesting idea for me was understanding that technologies such as Selenium or Playwright should be interchangeable, while the architecture should remain unchanged.
+
+I also started to understand Maven not as a "magic tool", but as a system that follows clear rules to build a project.
+
+---
+
+## ❓ Questions for myself
+
+- Why do transitive dependencies exist?
+- Why should architecture depend on responsibilities instead of technologies?
+- How can Selenium later be replaced with Playwright without changing the whole Framework?
+
+---
+
+## 🚀 Next Sprint
+
+- Finish Maven configuration.
+- Add Selenium.
+- Add REST Assured.
+- Create `config.properties`.
+- Implement `ConfigReader`.
+- Start building the Framework Core.
