@@ -115,3 +115,36 @@ I also started to understand Maven not as a "magic tool", but as a system that f
 - Create `config.properties`.
 - Implement `ConfigReader`.
 - Start building the Framework Core.
+
+# Session 5 — Configuration Module
+
+## Goal
+
+Complete Configuration Module and create the first Unit Tests.
+
+## Completed
+
+- Implemented ConfigManager (Singleton)
+- Implemented ConfigReader
+- Created ConfigReaderTest
+- Added 4 Unit Tests
+- Successfully executed the first JUnit test class
+
+## What I learned
+
+- Singleton Design Pattern
+- Difference between static and final
+- Constructor responsibility
+- Utility Class concept
+- JUnit Jupiter (@Test)
+- Assertions:
+  - assertNotNull()
+  - assertFalse()
+  - assertTrue()
+
+## Key Takeaways
+
+- ConfigManager is responsible for loading and storing configuration.
+- ConfigReader provides a simple interface for the Framework.
+- Objects should be fully initialized inside the constructor.
+- Fail Fast is better than continuing with an invalid configuration.

@@ -1,0 +1,59 @@
+JT
+────────────────────────────
+
+✅ OOP Basics
+
+    constructor
+
+    class
+
+    object
+
+    static
+
+    final
+
+────────────────────────────
+
+TL
+────────────────────────────
+
+✅ Basic Automation Framework Structure
+
+✅ Configuring Project & Property Files
+
+🟡 Design Patterns
+
+    Singleton
+
+────────────────────────────
+
+ST
+────────────────────────────
+
+🟡 Exception Handling
+
+🟡 Layered Architecture
+
+## Covered
+
+### JT
+
+- OOP Basics
+  - Class
+  - Object
+  - Constructor
+  - static
+  - final
+
+### TL
+
+- Basic Automation Framework Structure
+- Configuring Project & Property Files
+- Singleton Design Pattern
+- First JUnit 5 Tests
+
+### ST
+
+- RuntimeException
+- Fail Fast Principle (Introduction)

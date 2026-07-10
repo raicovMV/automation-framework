@@ -1,0 +1,134 @@
+Enterprise Automation Framework:
+Automation Framework
+│
+├── Configuration: (properties
+
+                   environment
+
+                   browser
+
+                   timeouts)
+│
+├── Core: (DriverFactory
+
+          PlaywrightFactory
+
+          ConfigReader
+
+          Base Classes
+
+          Lifecycle)
+│
+├── UI: (Pages
+
+         Components
+
+         Locators
+
+         Waits
+
+         Actions)
+│
+├── API: (Clients
+
+          Requests
+
+          Responses
+
+          DTO
+
+          Specifications)
+│
+├── Common: (Utils
+
+             Constants
+
+             Enums
+
+             Exceptions
+
+             Models)
+│
+├── Reporting: (Allure
+
+                Screenshots
+
+                Logs
+
+                Attachments)
+│
+└── Tests: (Smoke
+
+            Regression
+
+            API
+
+            UI)
+
+################################################
+Архитектура Configuration Module
+
+Прежде чем писать код, нам нужно решить, как будут взаимодействовать классы.
+
+Я предлагаю такую схему:
+
+                    Tests
+                      │
+                      ▼
+                ConfigReader
+                      │
+                      ▼
+               ConfigManager
+                      │
+        ┌─────────────┼─────────────┐
+        ▼             ▼             ▼
+ common.properties  ui.properties  api.properties
+                                      │
+                                      ▼
+                            playwright.properties
+
+ #ConfigReader
+
+  Это публичный API для Framework.
+
+  Любой класс сможет написать:
+
+  String browser = ConfigReader.get("browser");
+
+  И всё.
+
+  Никто не должен знать, где лежат .properties.
+  ----------------------------------------------------
+  ConfigManager
+
+  Это внутренний класс.
+
+  Он:
+
+  загружает .properties;
+  объединяет их;
+  хранит их в памяти;
+  работает как Singleton.
+
+  Никто, кроме ConfigReader, не будет к нему обращаться.
+----------------------------------------------
+Почему два класса?
+
+Потому что мы разделяем ответственность.
+
+ConfigReader отвечает
+
+"Дать значение."
+
+ConfigManager отвечает
+
+"Загрузить и хранить конфигурацию."
+
+Это соответствует принципу Single Responsibility.
+
+
+
+
+ ###############################################################
+
+
