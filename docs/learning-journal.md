@@ -148,3 +148,85 @@ Complete Configuration Module and create the first Unit Tests.
 - ConfigReader provides a simple interface for the Framework.
 - Objects should be fully initialized inside the constructor.
 - Fail Fast is better than continuing with an invalid configuration.
+
+###################NOTE#######################
+========================================
+SPRINT 5
+========================================
+
+Goal
+-----
+Launch the first browser using our Framework.
+
+Tasks
+------
+☑ Browser enum
+☑ BrowserFactory (skeleton)
+
+□ Playwright architecture
+□ BrowserFactory implementation
+□ First browser launch
+□ First smoke test
+□ Commit
+□ Learning Journal
+
+Expected Result
+---------------
+Framework opens Chrome and Edge
+using BrowserFactory.
+========================================
+#################NOTE END########################
+# Session 7 — Browser Support & Playwright Integration
+
+## Goal
+
+Start building the Playwright execution layer and support multiple browsers.
+
+## Completed
+
+- Added Playwright dependency to Maven.
+- Learned Playwright architecture.
+- Created SupportedBrowser enum.
+- Implemented browser conversion in ConfigReader.
+- Created BrowserFactory.
+- Implemented support for:
+  - Google Chrome
+  - Microsoft Edge
+- Created BrowserFactoryTest.
+- Successfully launched Chrome and Edge using the Framework.
+
+## What I learned
+
+### Java
+
+- enum as a type-safe alternative to String.
+- Difference between business objects and enums.
+- Constructor initialization of final fields.
+- Singleton responsibility.
+- Object lifecycle.
+
+### Playwright
+
+- Playwright
+- Browser
+- BrowserContext
+- Page
+
+- Difference between these objects.
+- Browser channels (chrome / msedge).
+- Why BrowserContext exists.
+
+### Maven
+
+- Dependency management.
+- First dependency download.
+- Local Maven Repository (.m2).
+- External Libraries synchronization.
+
+## Key Takeaways
+
+- Framework should read browser configuration instead of hardcoding it.
+- BrowserFactory should create browsers, not decide which browser to use.
+- ConfigReader converts configuration into strongly typed objects.
+- Managers are responsible for object lifecycle.
+

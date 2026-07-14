@@ -57,3 +57,25 @@ ST
 
 - RuntimeException
 - Fail Fast Principle (Introduction)
+
+## Covered
+
+### JT
+
+- enum
+- Constructor initialization
+- Object lifecycle
+
+### TL
+
+- Browser Factory
+- Factory Pattern
+- Playwright basics
+- Browser configuration
+
+### ST
+
+- Layered Architecture
+- Separation of Responsibilities
+- Type Safety
+

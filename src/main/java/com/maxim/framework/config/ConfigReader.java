@@ -8,6 +8,8 @@ String url = ConfigReader.get("base.url");
 and that's it.
 In other words, ConfigReader is a Facade (a simplified interface) over ConfigManager. */
 
+import com.maxim.framework.driver.SupportedBrowser;
+
 public final class ConfigReader {
 
     private ConfigReader() {
@@ -24,4 +26,6 @@ public final class ConfigReader {
     public static boolean getBoolean(String key) {
         return Boolean.parseBoolean(get(key));
     }
+
+    public static SupportedBrowser getBrowser() { String browser = get("browser"); return SupportedBrowser.valueOf(browser.toUpperCase()); }
 }

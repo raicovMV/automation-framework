@@ -26,6 +26,11 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.microsoft.playwright</groupId>
+            <artifactId>playwright</artifactId>
+            <version>1.54.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -37,7 +42,5 @@
             </plugin>
         </plugins>
     </build>
-
-
 
 </project>
