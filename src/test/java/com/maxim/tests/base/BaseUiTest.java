@@ -6,12 +6,14 @@ import com.maxim.framework.playwright.PageManager;
 import com.maxim.framework.playwright.PlaywrightManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import com.microsoft.playwright.Page;
 
 public class BaseUiTest {
 
     protected BrowserManager browserManager;
     protected BrowserContextManager browserContextManager;
     protected PageManager pageManager;
+    protected Page page;
 
     @BeforeEach
     void setUp() {
@@ -19,6 +21,7 @@ public class BaseUiTest {
 
         browserContextManager = new BrowserContextManager();
         pageManager = new PageManager(browserContextManager);
+        page = pageManager.getPage();
     }
 
     @AfterEach

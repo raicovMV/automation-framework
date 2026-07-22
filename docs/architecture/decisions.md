@@ -74,4 +74,64 @@ Playwright should not be created directly inside tests.
 The Framework is responsible for creating and disposing Playwright instances.
 
 
+##Decision 008
 
+Page Objects receive Playwright Page via constructor.
+
+Reason
+
+Removes dependency on PageManager.
+Makes Page Objects independent.
+Simplifies testing.
+Follows Dependency Injection principle.
+##Decision 009
+
+Page Objects return the next Page Object after successful navigation.
+
+Reason
+
+Tests reflect the business flow.
+Improves readability.
+Reduces coupling inside tests.
+
+Example:
+
+HomePage
+↓
+SignupLoginPage
+↓
+AccountInformationPage
+##Decision 010
+
+Reusable business actions should compose existing methods instead of duplicating implementation.
+
+Example:
+
+fillSignupForm(...)
+
+uses
+
+enterSignupName(...)
+enterSignupEmail(...)
+
+instead of calling Locator.fill() twice.
+
+Reason:
+
+Single place for future changes.
+Better maintainability.
+Less duplicated behavior.
+
+Decision 008
+
+Page Objects return the next Page Object after successful navigation.
+
+Decision 009
+
+All Page Objects follow a common structure:
+
+Dependencies
+Locators
+Constructor
+Actions
+State / Verification
